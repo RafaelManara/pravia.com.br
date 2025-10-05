@@ -1,0 +1,591 @@
+/* Reset e configurações base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  overflow-x: hidden;
+}
+
+.App {
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Cores exatas do PPT */
+:root {
+  --primary-blue: #1B5A7A;
+  --secondary-blue: #4ABBD8;
+  --light-blue: #B8E0F0;
+  --white: #FFFFFF;
+  --light-gray: #E8E8E8;
+  --dark-gray: #333333;
+}
+
+/* Header fixo - Exatamente como no PPT */
+.header-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: var(--primary-blue);
+  padding: 15px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo-img {
+  height: 40px;
+  width: auto;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Seção 1: Início - Fundo cinza claro como no PPT */
+.section-inicio {
+  min-height: 100vh;
+  background-color: var(--light-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 80px;
+}
+
+.inicio-content {
+  text-align: center;
+  max-width: 800px;
+}
+
+.inicio-logo {
+  width: 500px;
+  height: auto;
+  margin-bottom: 40px;
+}
+
+.inicio-tagline {
+  font-size: 32px;
+  color: var(--primary-blue);
+  margin-bottom: 40px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.btn-converse {
+  background-color: var(--secondary-blue);
+  color: var(--white);
+  border: none;
+  padding: 18px 50px;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(74, 187, 216, 0.3);
+}
+
+.btn-converse:hover {
+  background-color: #3AA5C2;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(74, 187, 216, 0.4);
+}
+
+/* Seção 2: Quem Somos - Fundo azul como no PPT */
+.section-quem-somos {
+  background-color: var(--secondary-blue);
+  padding: 100px 0;
+  color: var(--white);
+}
+
+.quem-somos-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.quem-somos-text h2 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: var(--white);
+}
+
+.quem-somos-text p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.quem-somos-image {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  height: 100%;
+}
+
+.quem-somos-img {
+  width: 100%;
+  max-width: 500px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Seção 3: Origem do Nome - Exatamente como no PPT */
+.section-origem-nome {
+  background: linear-gradient(180deg, var(--secondary-blue) 0%, var(--primary-blue) 100%);
+  padding: 100px 0;
+  color: var(--white);
+}
+
+.origem-titulo {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 60px;
+  color: var(--white);
+}
+
+.origem-main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.origem-words {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 40px;
+  align-items: start;
+  margin-bottom: 40px;
+}
+
+.origem-left-word, .origem-right-word {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 40px 30px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+}
+
+.origem-word-big {
+  font-size: 80px;
+  font-weight: bold;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+
+.origem-plus-center {
+  font-size: 80px;
+  font-weight: bold;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.origem-pronunciation {
+  font-size: 20px;
+  margin-bottom: 25px;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.origem-definitions-left, .origem-definitions-right {
+  text-align: left;
+}
+
+.origem-definitions-left p, .origem-definitions-right p {
+  font-size: 16px;
+  margin-bottom: 15px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.origem-fonte {
+  text-align: center;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 40px;
+}
+
+/* Seção 4: O Que Fazemos - Layout exato do PPT */
+.section-o-que-fazemos {
+  background-color: var(--light-gray);
+  padding: 100px 0;
+}
+
+.section-o-que-fazemos h2 {
+  font-size: 48px;
+  font-weight: bold;
+  color: var(--secondary-blue);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.section-o-que-fazemos h3 {
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--primary-blue);
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.fazemos-intro {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 60px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--primary-blue);
+}
+
+.territorios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.territorio-card {
+  background-color: var(--light-blue);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.territorio-card:hover {
+  transform: translateY(-5px);
+}
+
+.territorio-header {
+  background-color: var(--primary-blue);
+  color: var(--white);
+  padding: 20px;
+  text-align: center;
+}
+
+.territorio-header h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.territorio-content {
+  padding: 25px;
+}
+
+.territorio-content p {
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: var(--primary-blue);
+  font-weight: 500;
+}
+
+/* Seção 5: Como Trabalhamos - Imagem real do PPT */
+.section-como-trabalhamos {
+  background-color: var(--secondary-blue);
+  padding: 100px 0;
+  color: var(--white);
+}
+
+.como-trabalhamos-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.como-trabalhamos-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.como-trabalhamos-img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.como-trabalhamos-text h2 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: var(--white);
+}
+
+.metodologia-item {
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.metodologia-item:last-child {
+  border-bottom: none;
+}
+
+.metodologia-item h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: var(--white);
+}
+
+.metodologia-item p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* Seção 6: Contato - Exatamente como no PPT */
+.section-contato {
+  background-color: var(--light-gray);
+  padding: 100px 0;
+}
+
+.contato-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.contato-text h2 {
+  font-size: 48px;
+  font-weight: bold;
+  color: var(--secondary-blue);
+  margin-bottom: 30px;
+}
+
+.contato-text p {
+  font-size: 18px;
+  color: var(--primary-blue);
+  line-height: 1.6;
+}
+
+.contato-info {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.contato-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 18px;
+  color: var(--primary-blue);
+}
+
+.contato-icon {
+  width: 24px;
+  height: 24px;
+  color: var(--secondary-blue);
+}
+
+/* Botões flutuantes */
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #25D366;
+  color: white;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.whatsapp-float:hover {
+  background-color: #128C7E;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+}
+
+.scroll-top {
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  background-color: var(--primary-blue);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(27, 90, 122, 0.3);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.scroll-top:hover {
+  background-color: var(--secondary-blue);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(27, 90, 122, 0.4);
+}
+
+/* Animações */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
+  
+  .header-logo-text {
+    font-size: 20px;
+  }
+  
+  .inicio-logo {
+    width: 350px;
+  }
+  
+  .inicio-tagline {
+    font-size: 24px;
+  }
+  
+  .quem-somos-content,
+  .origem-definitions,
+  .como-trabalhamos-content,
+  .contato-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .origem-word {
+    font-size: 60px;
+  }
+  
+  .origem-plus {
+    font-size: 40px;
+  }
+  
+  .territorios-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .section-inicio,
+  .section-quem-somos,
+  .section-origem-nome,
+  .section-o-que-fazemos,
+  .section-como-trabalhamos,
+  .section-contato {
+    padding: 60px 0;
+  }
+  
+  h2 {
+    font-size: 36px !important;
+  }
+  
+  h3 {
+    font-size: 24px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 15px;
+  }
+  
+  .inicio-logo {
+    width: 280px;
+  }
+  
+  .inicio-tagline {
+    font-size: 20px;
+  }
+  
+  .btn-converse {
+    padding: 15px 35px;
+    font-size: 18px;
+  }
+  
+  .origem-word {
+    font-size: 48px;
+  }
+  
+  .origem-plus {
+    font-size: 36px;
+  }
+  
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .scroll-top {
+    width: 40px;
+    height: 40px;
+    bottom: 80px;
+    right: 20px;
+  }
+}
